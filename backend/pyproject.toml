@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "cookpedia"
+version = "0.1.0"
+description = "Home Recipe website"
+authors = ["Szaneron <58951668+Szaneron@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+django = "^5.1.1"
+django-environ = "^0.11.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
