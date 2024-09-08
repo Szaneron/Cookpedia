@@ -16,3 +16,6 @@ makemigrations:
 
 createsuperuser:
 	cd $(BACKEND_DIR) && $(POETRY) createsuperuser
+
+format:
+	cd $(BACKEND_DIR) && poetry run isort . && poetry run black . --line-length 100
