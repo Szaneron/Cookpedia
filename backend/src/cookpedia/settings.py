@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     "corsheaders",
     "src.apps.users",
     "src.apps.recipes",
+    "drf_yasg",
 ]
 
 MIDDLEWARE = [
@@ -79,6 +80,12 @@ TEMPLATES = [
         },
     },
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ],
+}
 
 WSGI_APPLICATION = "cookpedia.wsgi.application"
 
@@ -129,6 +136,8 @@ STATIC_URL = "static/"
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "frontend", "build", "static"),
 ]
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
