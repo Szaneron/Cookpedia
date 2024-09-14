@@ -1,0 +1,31 @@
+@import 'colors';
+
+// Overwrite Bootstrap colors
+$white: #f8f8ff;
+$black: #1f1f1f;
+$body-color: #1f1f1f;
+$primary: #198754;
+$danger: #e42535;
+$warning: #fdb035;
+
+// Rest Bootstrap styles
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body, html {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.form-control:focus {
+  box-shadow: 0 0 0 0.1rem rgba(36, 113, 88, 0.25) !important;
+}
+
+.is-invalid:focus {
+  box-shadow: 0 0 0 0.1rem rgba(228, 37, 53, 0.25) !important;
+}
+
+.bg-isabelline {
+  background-color: $isabelline;
+}
